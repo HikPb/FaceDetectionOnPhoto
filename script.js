@@ -1,17 +1,3 @@
-async function detectLisaFace() {const label = "Lisa";
-const numberImage = 14;const descriptions = [];
-for (let i = 1; i <= numberImage; i++) {
-const img = await faceapi.fetchImage( 
-`http://localhost:5500/data/Lisa/${i}.JPG`
-);
-const detection = await faceapi
-.detectSingleFace(img).withFaceLandmarks()
-.withFaceDescriptor(); 
-descriptions.push(detection.descriptor);
-}
-return new faceapi.LabeledFaceDescriptors(label, descriptions);
-}
-
 (async () => { 
     // Load model 
     await faceapi.nets.ssdMobilenetv1.loadFromUri("/models"); 
@@ -39,3 +25,18 @@ return new faceapi.LabeledFaceDescriptors(label, descriptions);
     }); 
     drawBox.draw(canvas);
     }})();
+
+async function detectLisaFace() {const label = "Lisa";
+const numberImage = 14;const descriptions = [];
+for (let i = 1; i <= numberImage; i++) {
+const img = await faceapi.fetchImage( 
+`http://localhost:5500/data/Lisa/${i}.JPG`
+);
+const detection = await faceapi
+.detectSingleFace(img).withFaceLandmarks()
+.withFaceDescriptor(); 
+descriptions.push(detection.descriptor);
+}
+return new faceapi.LabeledFaceDescriptors(label, descriptions);
+}
+
