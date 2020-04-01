@@ -1,5 +1,5 @@
-async function detectNancyFace() {const label = "Lisa";
-const numberImage = 5;const descriptions = [];
+async function detectLisaFace() {const label = "Lisa";
+const numberImage = 14;const descriptions = [];
 for (let i = 1; i <= numberImage; i++) {
 const img = await faceapi.fetchImage( 
 `http://localhost:5500/data/Lisa/${i}.JPG`
@@ -30,7 +30,7 @@ return new faceapi.LabeledFaceDescriptors(label, descriptions);
     const resizedDetections = faceapi.resizeResults(result, displaySize); 
     console.log(resizedDetections); 
     // Recognize Face
-    const labeledFaceDescriptors = await detectNancyFace();
+    const labeledFaceDescriptors = await detectLisaFace();
     const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, 0.7);
     if (result) {
     const bestMatch = faceMatcher.findBestMatch(result.descriptor);
