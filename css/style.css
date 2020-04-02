@@ -1,5 +1,11 @@
+html, 
+body {
+    height: 100%;
+    background: #007b5e;
+}
 section {
-  padding: 60px 0;
+  padding: 0;
+  position: relative;
 }
 
 section .section-title {
@@ -25,14 +31,28 @@ background: #007b5e;
   font-weight: bold;
 }
 #tabs .nav-tabs .nav-link {
-  border: 1px solid transparent;
-  border-top-left-radius: .25rem;
-  border-top-right-radius: .25rem;
+  border: 2px solid transparent;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
   color: #eee;
   font-size: 20px;
 }
 
 footer {
   background: #ffffff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   text-align: center;
+}
+
+input{
+  background: yellow;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
 }

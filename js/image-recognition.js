@@ -1,5 +1,5 @@
 const imageUpload = document.getElementById('imageUpload')
-const div1 = document.getElementById('div1');
+const div1 = document.getElementById('img-div');
 
 Promise.all([
   faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
@@ -12,7 +12,7 @@ async function start() {
   container.style.position = 'relative'
   div1.append(container)
   const labeledFaceDescriptors = await detectLabeledFace()
-  const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, 0.6)
+  const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, 0.7)
   let image
   let canvas
   div1.append('Loaded')

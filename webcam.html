@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Face Detection</title>
+
+     <meta charset="UTF-8">
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+     <script defer src="face-api.min.js"></script>
+     <script defer src="./js/webcam-recognition.js"></script>
+     <link rel="stylesheet" href="./css/style.css">
+</head>
+
+
+<body>
+     <section id="tabs">
+          <div class="container">
+               <h6 class="section-title h1">Face Detection App</h6>
+               <div class="row">
+                    <div class="col-xs-12 ">
+                         <nav>
+                              <ul class="nav nav-tabs" id="nav-tab">
+                                   <li class="nav-item nav-link"  data-toggle="tab" href="index.html" role="tab">Image Recognition</li>
+                                   <li class="nav-item nav-link"  data-toggle="tab" href="webcam.html" role="tab">Webcam Recognition</li>
+                              </ul>
+                         </nav>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <div id="wecm-div" class="container">
+        <video id="video" width="720" height="560" autoplay muted></video>
+     </div>
+   
+
+     <!-- FOOTER -->
+     <footer id="footer" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-12">
+                         <p>Hanoi University of Science and Technology</p>
+                    </div>
+               </div>
+          </div>
+     </footer>
+
+</body>
+</html>
