@@ -1,20 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<script src="./face-api.min.js"></script>
-<script src="./script.js"></script>
-<title>Face Recognition</title><style>
- canvas { 
-position: absolute; 
-top: 0; 
-left: 0; 
-}
-</style>
+
+	<title>Face Detection</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="team" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <script defer src="face-api.min.js"></script>
+     <script defer src="./js/script.js"></script>
+     <link rel="stylesheet" href="./css/style.css">
+     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     
 </head>
+
+
 <body>
-<img id="myImg" src="images/7c.jpg" />
-<canvas id="myCanvas"></body>
+
+<!-- Tabs -->
+<section id="tabs">
+	<div class="container">
+		<h6 class="section-title h1">Face Detection App</h6>
+		<div class="row">
+			<div class="col-xs-12 ">
+				<nav>
+					<div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+						<a class="nav-item nav-link" id="nav-img" data-toggle="tab" href="#img-recognition" role="tab" aria-controls="nav-home" aria-selected="true">Image Recognition</a>
+						<a class="nav-item nav-link" id="nav-webcam" data-toggle="tab" href="#webcam-recognition" role="tab" aria-controls="nav-profile" aria-selected="false">Webcam Recognition</a>
+					</div>
+				</nav>
+				<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+					<div class="tab-pane fade show active" id="img-recognition" role="tabpanel" aria-labelledby="nav-home-tab">
+                              Tab 1
+                         </div>
+					<div class="tab-pane fade" id="webcam-recognition" role="tabpanel" aria-labelledby="nav-profile-tab">
+                              Tab2
+                         </div>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+</section>
+
+     <!-- FOOTER -->
+     <footer id="footer" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="copyright-text col-md-12 col-sm-12">
+                         <div class="col-md-6 col-sm-6">
+                              <p>Hanoi University of Science and Technology</p>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </footer>
+
+</body>
 </html>
